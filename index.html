@@ -1,52 +1,172 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alvadespro — Send Your Plan or AI Render for a Free Design Review</title>
-<meta name="description" content="Send your floor plan or AI render. A real designer reviews it for free and replies within 24 hours. 3,400+ projects delivered since 2020.">
-<meta property="og:title" content="Alvadespro — You Have the Idea. We Give It the Design.">
-<meta property="og:description" content="Free design review of your floor plan or AI render. Reply within 24 hours.">
-<meta property="og:image" content="images/walnut-slat-residence.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/walnut-slat-residence.jpg">
-<style>
-body{margin:0;background:#FBFAF7}
-a{color:#0F0E0C}a:hover{color:#4E4940}
-.wrap{max-width:1240px;margin:0 auto;padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);box-sizing:border-box}
-.sec{padding-top:clamp(80px,11vw,160px);padding-bottom:clamp(80px,11vw,160px)}
-.desk{display:none !important}
-.btn-row{display:flex;flex-direction:column;gap:12px;width:100%}
-.split{display:flex;flex-direction:column;gap:40px}
-.duo{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
-.works{display:grid;grid-template-columns:minmax(0,1fr);gap:48px 24px}
-.sticky-cta{display:none}
-.foot-pad{padding-bottom:104px}
-@media (max-width:767px){.sticky-cta.on{display:flex}}
-@media (min-width:768px){
-.desk{display:inline-flex !important}
-.btn-row{flex-direction:row;width:auto}
-.duo{grid-template-columns:repeat(2,minmax(0,1fr))}
-.works{grid-template-columns:repeat(2,minmax(0,1fr));gap:64px 24px}
-.work.wide{grid-column:1 / -1}
-.foot-pad{padding-bottom:56px}
-}
-@media (min-width:960px){.split{flex-direction:row;gap:96px}.split > *{flex:1 1 0;min-width:0}}
-summary{cursor:pointer;list-style:none}
-summary::-webkit-details-marker{display:none}
-input,select,textarea{font-family:'Inter',system-ui,sans-serif}
-input:focus,select:focus,textarea:focus{outline:1px solid #A8875A;outline-offset:2px}
-</style>
-<style>
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.toggle[aria-pressed="true"]{background:#FBFAF7;color:#0F0E0C}
-.toggle[aria-pressed="false"]{background:transparent;color:#A9A194}
-a:focus-visible,button:focus-visible{outline:2px solid #A8875A;outline-offset:3px}
-</style>
-  <!-- OpenAI Ads pixel -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alvadespro — Send Your Plan or AI Render for a Free Design Review</title>
+    <meta name="description" content="Send your floor plan or AI render. A real designer reviews it for free and replies within 24 hours. 3,400+ projects delivered since 2020.">
+    <meta property="og:title" content="Alvadespro — You Have the Idea. We Give It the Design.">
+    <meta property="og:description" content="Free design review of your floor plan or AI render. Reply within 24 hours.">
+    <meta property="og:image" content="images/walnut-slat-residence.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="images/walnut-slat-residence.jpg">
+    <style>
+    body {
+        margin: 0;
+        background: #FBFAF7
+    }
+
+    a {
+        color:#0F0E0C
+    }
+
+    a:hover {
+        color: #4E4940
+    }
+
+    .wrap {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding-left: clamp(20px, 5vw, 40px);
+        padding-right: clamp(20px, 5vw, 40px);
+        box-sizing: border-box
+    }
+
+    .sec {
+        padding-top: clamp(80px, 11vw, 160px);
+        padding-bottom: clamp(80px, 11vw, 160px)
+    }
+
+    .desk {
+        display: none !important
+    }
+
+    .btn-row {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%
+    }
+
+    .split {
+        display: flex;
+        flex-direction: column;
+        gap: 40px
+    }
+
+    .duo {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px
+    }
+
+    .works {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 48px 24px
+    }
+
+    .sticky-cta {
+        display: none
+    }
+
+    .foot-pad {
+        padding-bottom: 104px
+    }
+
+    @media (max-width: 767px) {
+        .sticky-cta.on {
+            display: flex
+        }
+    }
+
+    @media (min-width: 768px) {
+        .desk {
+            display: inline-flex !important
+        }
+
+        .btn-row {
+            flex-direction: row;
+            width: auto
+        }
+
+        .duo {
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+
+        .works {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 64px 24px
+        }
+
+        .work.wide {
+            grid-column: 1 / -1
+        }
+
+        .foot-pad {
+            padding-bottom: 56px
+        }
+    }
+
+    @media (min-width: 960px) {
+        .split {
+            flex-direction: row;
+            gap:96px
+        }
+
+        .split > * {
+            flex: 1 1 0;
+            min-width: 0
+        }
+    }
+
+    summary {
+        cursor: pointer;
+        list-style: none
+    }
+
+    summary::-webkit-details-marker {
+        display: none
+    }
+
+    input, select, textarea {
+        font-family: 'Inter', system-ui, sans-serif
+    }
+
+    input:focus, select:focus, textarea:focus {
+        outline: 1px solid #A8875A;
+        outline-offset: 2px
+    }
+    </style>
+    <style>
+    html {
+        scroll-behavior: smooth
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto
+        }
+    }
+
+    .toggle[aria-pressed="true"] {
+        background: #FBFAF7;
+        color: #0F0E0C
+    }
+
+    .toggle[aria-pressed="false"] {
+        background: transparent;
+        color: #A9A194
+    }
+
+    a:focus-visible, button:focus-visible {
+        outline: 2px solid #A8875A;
+        outline-offset: 3px
+    }
+    </style>
+    <!-- OpenAI Ads pixel -->
     <script>
     !function(w, d, s, u) {
         if (w.oaiq)
@@ -69,295 +189,610 @@ a:focus-visible,button:focus-visible{outline:2px solid #A8875A;outline-offset:3p
     </script>
 </head>
 <body>
-<div style="font-family: 'Inter', system-ui, sans-serif; color: #0F0E0C; background: #FBFAF7; min-height: 100vh">
+    <div style="font-family: 'Inter', system-ui, sans-serif; color: #0F0E0C; background: #FBFAF7; min-height: 100vh">
 
-<!-- NAV -->
-<div style="position: sticky; top: 0; z-index: 40; background: rgba(251,250,247,0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid #EFEBE4">
-<header class="wrap" style="height: 64px; display: flex; justify-content: space-between; align-items: center; gap: 16px">
-<span style="font-family: 'Fraunces', Georgia, serif; font-size: 17px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase">Alvadespro</span>
-<div style="display: flex; align-items: center; gap: 28px">
-<a href="https://alvadespro.framer.media/projects" target="_blank" rel="noopener" data-track="nav_projects" class="desk" style="font-size: 12px; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; color: #6B655B; min-height: 44px; align-items: center">Projects</a>
-<a href="#submit" data-track="cta_nav" style="color: #0F0E0C; font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; padding: 0 18px; min-height: 40px; box-sizing: border-box; display: inline-flex; align-items: center; border: 1px solid #A8875A">Free Review</a>
-</div>
-</header>
-</div>
+        <!-- NAV -->
+        <div style="position: sticky; top: 0; z-index: 40; background: rgba(251,250,247,0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid #EFEBE4">
+            <header class="wrap" style="height: 64px; display: flex; justify-content: space-between; align-items: center; gap: 16px">
+                <span style="font-family: 'Fraunces', Georgia, serif; font-size: 17px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase">Alvadespro</span>
+                <div style="display: flex; align-items: center; gap: 28px">
+                    <a href="https://alvadespro.framer.media/projects" target="_blank" rel="noopener" data-track="nav_projects" class="desk" style="font-size: 12px; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; color: #6B655B; min-height: 44px; align-items: center">Projects</a>
+                    <a href="#submit" data-track="cta_nav" style="color: #0F0E0C; font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; padding: 0 18px; min-height: 40px; box-sizing: border-box; display: inline-flex; align-items: center; border: 1px solid #A8875A">Free Review</a>
+                </div>
+            </header>
+        </div>
 
-<!-- HERO -->
-<section class="wrap" style="padding-top: clamp(48px, 9vw, 120px); display: flex; flex-direction: column; gap: 28px">
-<span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">Design Studio · Since 2020</span>
-<h1 style="margin: 0; max-width: 960px; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(42px, 7vw, 92px); line-height: 1.02; letter-spacing: -1.5px">You Have the Idea. <span style="font-style: italic; color: #8C6D3F">We Give It the Design.</span></h1>
-<p style="margin: 0; max-width: 560px; font-size: 17px; line-height: 1.7; color: #4E4940">Send us your floor plan or your AI render. A real designer turns it into an accurate, refined visual.</p>
-<div class="btn-row" style="margin-top: 4px">
-<a href="#submit" data-path="plan" data-track="cta_hero_plan" style="background: #0F0E0C; color: #FBFAF7; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center">Send Your Plan</a>
-<a href="#submit" data-path="render" data-track="cta_hero_render" style="background: transparent; color: #0F0E0C; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center; border: 1px solid #0F0E0C">Send Your AI Render</a>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: 13px; color: #4E4940">
-<span><strong style="font-weight: 500; color: #0F0E0C">Free review</strong></span>
-<span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 50%; background: #A8875A"></span>
-<span>Reply within 24 hours</span>
-<span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 50%; background: #A8875A"></span>
-<span>3,400+ projects since 2020</span>
-</div>
-</section>
-<div class="wrap" style="padding-top: clamp(48px, 7vw, 96px)">
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
-<img src="images/walnut-slat-residence.jpg" alt="Living and dining room with walnut slat wall and ceiling, designed by Alvadespro" style="display: block; width: 100%; aspect-ratio: 4 / 3; max-height: 640px; object-fit: cover; object-position: 50% 45%; background: #F1EEE9">
-<figcaption style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">Walnut Slat Residence — Living &amp; Dining</figcaption>
-</figure>
-</div>
+        <!-- HERO -->
+        <section class="wrap" style="padding-top: clamp(48px, 9vw, 120px); display: flex; flex-direction: column; gap: 28px">
+            <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">Design Studio · Since 2020</span>
+            <h1 style="margin: 0; max-width: 960px; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(42px, 7vw, 92px); line-height: 1.02; letter-spacing: -1.5px">
+                You Have the Idea. 
+                <span style="font-style: italic; color: #8C6D3F">We Give It the Design.</span>
+            </h1>
+            <p style="margin: 0; max-width: 560px; font-size: 17px; line-height: 1.7; color: #4E4940">Send us your floor plan or your AI render. A real designer turns it into an accurate, refined visual.</p>
+            <div class="btn-row" style="margin-top: 4px">
+                <a href="#submit" data-path="plan" data-track="cta_hero_plan" style="background: #0F0E0C; color: #FBFAF7; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center">Send Your Plan</a>
+                <a href="#submit" data-path="render" data-track="cta_hero_render" style="background: transparent; color: #0F0E0C; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center; border: 1px solid #0F0E0C">Send Your AI Render</a>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: 13px; color: #4E4940">
+                <span>
+                    <strong style="font-weight: 500; color: #0F0E0C">Free review</strong>
+                </span>
+                <span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 50%; background: #A8875A"></span>
+                <span>Reply within 24 hours</span>
+                <span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 50%; background: #A8875A"></span>
+                <span>3,400+ projects since 2020</span>
+            </div>
+            <a href="https://www.fiverr.com/alvadespro" target="_blank" rel="noopener" data-track="fiverr_badge_hero" style="align-self: flex-start; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding: 10px 16px; min-height: 44px; box-sizing: border-box; border: 1px solid #E8E3DA; background: #FFFFFF; text-decoration: none; color: #0F0E0C; font-size: 13px">
+                <span style="color: #A8875A; letter-spacing: 2px">★★★★★</span>
+                <span>
+                    <strong style="font-weight: 500">4.8</strong>
+                     from 1,700+ reviews
+                </span>
+                <span aria-hidden="true" style="width: 1px; height: 14px; background: #E8E3DA"></span>
+                <span style="font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: #7A5E35">Top Rated Seller on Fiverr</span>
+            </a>
+        </section>
+        <div class="wrap" style="padding-top: clamp(48px, 7vw, 96px)">
+            <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+                <img src="images/walnut-slat-residence.jpg" alt="Living and dining room with walnut slat wall and ceiling, designed by Alvadespro" style="display: block; width: 100%; aspect-ratio: 4 / 3; max-height: 640px; object-fit: cover; object-position: 50% 45%; background: #F1EEE9">
+                <figcaption style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">Walnut Slat Residence — Living &amp; Dining</figcaption>
+            </figure>
+        </div>
 
-<!-- TWO PATHS -->
-<section class="wrap sec" style="display: flex; flex-direction: column; gap: 48px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px; max-width: 720px">Two starting points. One designer.</h2>
-<div class="duo" style="gap: 0 48px">
-<div style="padding: 32px 0 40px; border-top: 1px solid #A8875A; display: flex; flex-direction: column; gap: 16px">
-<span style="font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; font-size: 20px; color: #9A7B4F">i.</span>
-<h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 28px; letter-spacing: -0.3px">You have a plan.</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4E4940; max-width: 440px">A floor plan, sketch, or reference — but no visual yet. We design the space and turn it into a realistic render you can build from.</p>
-<a href="#submit" data-path="plan" data-track="cta_path_plan" style="font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; color: #0F0E0C; border-bottom: 1px solid #0F0E0C; padding: 12px 0; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; align-self: flex-start; margin-top: 8px">Send your plan →</a>
-</div>
-<div style="padding: 32px 0 40px; border-top: 1px solid #A8875A; display: flex; flex-direction: column; gap: 16px">
-<span style="font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; font-size: 20px; color: #9A7B4F">ii.</span>
-<h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 28px; letter-spacing: -0.3px">You have an AI render.</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4E4940; max-width: 440px">The idea is there, but the result doesn’t match your space. We refine materials, proportions, layout, details, and light.</p>
-<a href="#submit" data-path="render" data-track="cta_path_render" style="font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; color: #0F0E0C; border-bottom: 1px solid #0F0E0C; padding: 12px 0; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; align-self: flex-start; margin-top: 8px">Send your AI render →</a>
-</div>
-</div>
-</section>
+        <!-- TWO PATHS -->
+        <section class="wrap sec" style="display: flex; flex-direction: column; gap: 48px">
+            <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px; max-width: 720px">Two starting points. One designer.</h2>
+            <div class="duo" style="gap: 0 48px">
+                <div style="padding: 32px 0 40px; border-top: 1px solid #A8875A; display: flex; flex-direction: column; gap: 16px">
+                    <span style="font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; font-size: 20px; color: #9A7B4F">i.</span>
+                    <h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 28px; letter-spacing: -0.3px">You have a plan.</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4E4940; max-width: 440px">A floor plan, sketch, or reference — but no visual yet. We design the space and turn it into a realistic render you can build from.</p>
+                    <a href="#submit" data-path="plan" data-track="cta_path_plan" style="font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; color: #0F0E0C; border-bottom: 1px solid #0F0E0C; padding: 12px 0; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; align-self: flex-start; margin-top: 8px">Send your plan →</a>
+                </div>
+                <div style="padding: 32px 0 40px; border-top: 1px solid #A8875A; display: flex; flex-direction: column; gap: 16px">
+                    <span style="font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; font-size: 20px; color: #9A7B4F">ii.</span>
+                    <h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 28px; letter-spacing: -0.3px">You have an AI render.</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4E4940; max-width: 440px">The idea is there, but the result doesn’t match your space. We refine materials, proportions, layout, details, and light.</p>
+                    <a href="#submit" data-path="render" data-track="cta_path_render" style="font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; color: #0F0E0C; border-bottom: 1px solid #0F0E0C; padding: 12px 0; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; align-self: flex-start; margin-top: 8px">Send your AI render →</a>
+                </div>
+            </div>
+        </section>
 
-<!-- PROBLEM -->
-<section style="background: #0F0E0C; color: #FBFAF7">
-<div class="wrap sec split">
-<div style="display: flex; flex-direction: column; gap: 24px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">AI Can Generate a Beautiful Image. <span style="font-style: italic; color: #C9AD7C">It Can’t Always Understand Your Space.</span></h2>
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #A9A194; max-width: 460px">You already have the concept. The problem is turning that concept into something that actually makes sense.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 32px">
-<ul style="margin: 0; padding: 0; list-style: none; border-bottom: 1px solid #2E2A24">
-<li style="padding: 18px 0; border-top: 1px solid #2E2A24; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px)">Materials look wrong</li>
-<li style="padding: 18px 0; border-top: 1px solid #2E2A24; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px)">Proportions feel unrealistic</li>
-<li style="padding: 18px 0; border-top: 1px solid #2E2A24; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px)">Layout doesn’t match the real space</li>
-<li style="padding: 18px 0; border-top: 1px solid #2E2A24; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px)">Architectural details are inaccurate</li>
-<li style="padding: 18px 0; border-top: 1px solid #2E2A24; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px)">Lighting and perspective feel unnatural</li>
-</ul>
-<a href="#submit" data-path="render" data-track="cta_problem" style="font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; color: #FBFAF7; border-bottom: 1px solid #FBFAF7; padding: 12px 0; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; align-self: flex-start">Get your AI render reviewed →</a>
-</div>
-</div>
-</section>
+        <!-- PROBLEM -->
+        <section style="background: #0F0E0C; color: #FBFAF7">
+            <div class="wrap sec split">
+                <div style="display: flex; flex-direction: column; gap: 24px">
+                    <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">
+                        AI Can Generate a Beautiful Image. 
+                        <span style="font-style: italic; color: #C9AD7C">It Can’t Always Understand Your Space.</span>
+                    </h2>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #A9A194; max-width: 460px">You already have the concept. The problem is turning that concept into something that actually makes sense.</p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 32px">
+                    <ul style="margin: 0; padding: 0; list-style: none; border-bottom: 1px solid #2E2A24">
+                        <li style="padding: 18px 0; border-top: 1px solid #2E2A24; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px)">Materials look wrong</li>
+                        <li style="padding: 18px 0; border-top: 1px solid #2E2A24; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px)">Proportions feel unrealistic</li>
+                        <li style="padding: 18px 0; border-top: 1px solid #2E2A24; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px)">Layout doesn’t match the real space</li>
+                        <li style="padding: 18px 0; border-top: 1px solid #2E2A24; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px)">Architectural details are inaccurate</li>
+                        <li style="padding: 18px 0; border-top: 1px solid #2E2A24; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px)">Lighting and perspective feel unnatural</li>
+                    </ul>
+                    <a href="#submit" data-path="render" data-track="cta_problem" style="font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; color: #FBFAF7; border-bottom: 1px solid #FBFAF7; padding: 12px 0; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; align-self: flex-start">Get your AI render reviewed →</a>
+                </div>
+            </div>
+        </section>
 
-<!-- PROCESS -->
-<section class="wrap sec split">
-<div style="display: flex; flex-direction: column; gap: 20px">
-<span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">The process</span>
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">Bring What You Have. <span style="font-style: italic; color: #9A7B4F">We’ll Design It.</span></h2>
-</div>
-<div style="display: flex; flex-direction: column; border-bottom: 1px solid #E8E3DA">
-<div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #E8E3DA"><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 28px; line-height: 1; color: #9A7B4F; min-width: 40px">01</span><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase">Send</span><span style="font-size: 15px; line-height: 1.65; color: #4E4940">Upload your floor plan, sketch, reference, or AI render.</span></div></div>
-<div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #E8E3DA"><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 28px; line-height: 1; color: #9A7B4F; min-width: 40px">02</span><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase">Review</span><span style="font-size: 15px; line-height: 1.65; color: #4E4940">A designer studies the space and identifies what needs to change.</span></div></div>
-<div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #E8E3DA"><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 28px; line-height: 1; color: #9A7B4F; min-width: 40px">03</span><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase">Design</span><span style="font-size: 15px; line-height: 1.65; color: #4E4940">We shape composition, materials, proportions, details, and lighting.</span></div></div>
-<div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #E8E3DA"><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 28px; line-height: 1; color: #9A7B4F; min-width: 40px">04</span><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase">Deliver</span><span style="font-size: 15px; line-height: 1.65; color: #4E4940">Receive an accurate, professionally refined visual.</span></div></div>
-</div>
-</section>
+        <!-- PROCESS -->
+        <section class="wrap sec split">
+            <div style="display: flex; flex-direction: column; gap: 20px">
+                <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">The process</span>
+                <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">
+                    Bring What You Have. 
+                    <span style="font-style: italic; color: #9A7B4F">We’ll Design It.</span>
+                </h2>
+            </div>
+            <div style="display: flex; flex-direction: column; border-bottom: 1px solid #E8E3DA">
+                <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #E8E3DA">
+                    <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 28px; line-height: 1; color: #9A7B4F; min-width: 40px">01</span>
+                    <div style="display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 12px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase">Send</span>
+                        <span style="font-size: 15px; line-height: 1.65; color: #4E4940">Upload your floor plan, sketch, reference, or AI render.</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #E8E3DA">
+                    <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 28px; line-height: 1; color: #9A7B4F; min-width: 40px">02</span>
+                    <div style="display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 12px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase">Review</span>
+                        <span style="font-size: 15px; line-height: 1.65; color: #4E4940">A designer studies the space and identifies what needs to change.</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #E8E3DA">
+                    <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 28px; line-height: 1; color: #9A7B4F; min-width: 40px">03</span>
+                    <div style="display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 12px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase">Design</span>
+                        <span style="font-size: 15px; line-height: 1.65; color: #4E4940">We shape composition, materials, proportions, details, and lighting.</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 20px; padding: 24px 0; border-top: 1px solid #E8E3DA">
+                    <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 28px; line-height: 1; color: #9A7B4F; min-width: 40px">04</span>
+                    <div style="display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 12px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase">Deliver</span>
+                        <span style="font-size: 15px; line-height: 1.65; color: #4E4940">Receive an accurate, professionally refined visual.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- BEFORE / AFTER -->
-<section class="wrap" style="padding-bottom: clamp(80px, 11vw, 160px); display: flex; flex-direction: column; gap: 40px">
-<div class="split" style="gap: 20px 96px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">From AI Concept <span style="font-style: italic; color: #9A7B4F">to Designed Space.</span></h2>
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4E4940">Same bedroom, same idea. The AI version looks warm — but the proportions, paneling, and lighting don’t hold up. The refined version does.</p>
-</div>
-<div class="duo">
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
-<img src="images/moon-wall-bedroom-ai-concept.jpg" alt="AI-generated bedroom concept before refinement" style="display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: #F1EEE9">
-<figcaption style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">Before — AI Concept</figcaption>
-</figure>
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
-<img src="images/moon-wall-bedroom.jpg" alt="The same bedroom after Alvadespro designer refinement" style="display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: #F1EEE9">
-<figcaption style="font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: #0F0E0C">After — Designer Refinement</figcaption>
-</figure>
-</div>
-<div class="btn-row">
-<a href="#submit" data-path="render" data-track="cta_before_after" style="background: #0F0E0C; color: #FBFAF7; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center">Refine My AI Render</a>
-<a href="#submit" data-path="plan" data-track="cta_before_after_plan" style="background: transparent; color: #0F0E0C; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center; border: 1px solid #0F0E0C">I Have a Plan Instead</a>
-</div>
-</section>
+        <!-- BEFORE / AFTER -->
+        <section class="wrap" style="padding-bottom: clamp(80px, 11vw, 160px); display: flex; flex-direction: column; gap: 40px">
+            <div class="split" style="gap: 20px 96px">
+                <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">
+                    From AI Concept 
+                    <span style="font-style: italic; color: #9A7B4F">to Designed Space.</span>
+                </h2>
+                <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4E4940">Same bedroom, same idea. The AI version looks warm — but the proportions, paneling, and lighting don’t hold up. The refined version does.</p>
+            </div>
+            <div class="duo">
+                <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+                    <img src="images/moon-wall-bedroom-ai-concept.jpg" alt="AI-generated bedroom concept before refinement" style="display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: #F1EEE9">
+                    <figcaption style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">Before — AI Concept</figcaption>
+                </figure>
+                <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+                    <img src="images/moon-wall-bedroom.jpg" alt="The same bedroom after Alvadespro designer refinement" style="display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: #F1EEE9">
+                    <figcaption style="font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: #0F0E0C">After — Designer Refinement</figcaption>
+                </figure>
+            </div>
+            <div class="btn-row">
+                <a href="#submit" data-path="render" data-track="cta_before_after" style="background: #0F0E0C; color: #FBFAF7; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center">Refine My AI Render</a>
+                <a href="#submit" data-path="plan" data-track="cta_before_after_plan" style="background: transparent; color: #0F0E0C; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center; border: 1px solid #0F0E0C">I Have a Plan Instead</a>
+            </div>
+        </section>
 
-<!-- RECENT WORK -->
-<section style="border-top: 1px solid #E8E3DA">
-<div class="wrap sec" style="display: flex; flex-direction: column; gap: 48px">
-<div style="display: flex; flex-direction: column; gap: 16px">
-<span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">Recent work</span>
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">Selected Projects</h2>
-</div>
-<div class="works">
-<figure class="work wide" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
-<img src="images/vaulted-great-room.jpg" alt="Vaulted living room with dark marble fireplace wall, exposed beams and brass chandelier" loading="lazy" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #F1EEE9">
-<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">01 · Living Room</span><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Vaulted Great Room</span></figcaption>
-</figure>
-<figure class="work" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
-<img src="images/walnut-slat-residence.jpg" alt="Living and dining space wrapped in walnut slats with warm backlighting" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #F1EEE9">
-<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">02 · Living &amp; Dining</span><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Walnut Slat Residence</span></figcaption>
-</figure>
-<figure class="work" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
-<img src="images/floating-stair-house.jpg" alt="Open living space with floating stair, indoor garden, bookshelves and kitchen beyond" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #F1EEE9">
-<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">03 · Living &amp; Kitchen</span><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Floating Stair House</span></figcaption>
-</figure>
-<figure class="work" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
-<img src="images/black-oak-kitchen.jpg" alt="Kitchen with matte black cabinetry, oak island and wood-clad ceiling" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #F1EEE9">
-<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">04 · Kitchen</span><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Black &amp; Oak Kitchen</span></figcaption>
-</figure>
-<figure class="work" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
-<img src="images/moon-wall-bedroom.jpg" alt="Bedroom with walnut feature wall, backlit circular relief and paneled walls" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #F1EEE9">
-<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">05 · Primary Bedroom</span><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Moon Wall Bedroom</span></figcaption>
-</figure>
-<figure class="work wide" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
-<img src="images/slate-walnut-bath.jpg" alt="Bathroom with dark slate walls, walnut vanity and fluted wood panels" loading="lazy" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #F1EEE9">
-<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">06 · Primary Bathroom</span><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Slate &amp; Walnut Bath</span></figcaption>
-</figure>
-</div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid #E8E3DA; padding-top: 28px">
-<a href="https://alvadespro.framer.media/projects" target="_blank" rel="noopener" data-track="view_all_projects" style="font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; color: #0F0E0C; border-bottom: 1px solid #0F0E0C; padding: 12px 0; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; align-self: flex-start">View all projects ↗</a>
-<a href="#submit" data-track="cta_portfolio" class="desk" style="background: #0F0E0C; color: #FBFAF7; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center">Start Your Project</a>
-</div>
-</div>
-</section>
+        <!-- RECENT WORK -->
+        <section style="border-top: 1px solid #E8E3DA">
+            <div class="wrap sec" style="display: flex; flex-direction: column; gap: 48px">
+                <div style="display: flex; flex-direction: column; gap: 16px">
+                    <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">Recent work</span>
+                    <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">Selected Projects</h2>
+                </div>
+                <div class="works">
+                    <figure class="work wide" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+                        <img src="images/vaulted-great-room.jpg" alt="Vaulted living room with dark marble fireplace wall, exposed beams and brass chandelier" loading="lazy" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #F1EEE9">
+                        <figcaption style="display: flex; flex-direction: column; gap: 6px">
+                            <span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">01 · Living Room</span>
+                            <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Vaulted Great Room</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="work" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+                        <img src="images/walnut-slat-residence.jpg" alt="Living and dining space wrapped in walnut slats with warm backlighting" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #F1EEE9">
+                        <figcaption style="display: flex; flex-direction: column; gap: 6px">
+                            <span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">02 · Living &amp; Dining</span>
+                            <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Walnut Slat Residence</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="work" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+                        <img src="images/floating-stair-house.jpg" alt="Open living space with floating stair, indoor garden, bookshelves and kitchen beyond" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #F1EEE9">
+                        <figcaption style="display: flex; flex-direction: column; gap: 6px">
+                            <span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">03 · Living &amp; Kitchen</span>
+                            <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Floating Stair House</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="work" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+                        <img src="images/black-oak-kitchen.jpg" alt="Kitchen with matte black cabinetry, oak island and wood-clad ceiling" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #F1EEE9">
+                        <figcaption style="display: flex; flex-direction: column; gap: 6px">
+                            <span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">04 · Kitchen</span>
+                            <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Black &amp; Oak Kitchen</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="work" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+                        <img src="images/moon-wall-bedroom.jpg" alt="Bedroom with walnut feature wall, backlit circular relief and paneled walls" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #F1EEE9">
+                        <figcaption style="display: flex; flex-direction: column; gap: 6px">
+                            <span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">05 · Primary Bedroom</span>
+                            <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Moon Wall Bedroom</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="work wide" style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+                        <img src="images/slate-walnut-bath.jpg" alt="Bathroom with dark slate walls, walnut vanity and fluted wood panels" loading="lazy" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #F1EEE9">
+                        <figcaption style="display: flex; flex-direction: column; gap: 6px">
+                            <span style="font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #8A8377">06 · Primary Bathroom</span>
+                            <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; letter-spacing: -0.2px">Slate &amp; Walnut Bath</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid #E8E3DA; padding-top: 28px">
+                    <a href="https://alvadespro.framer.media/projects" target="_blank" rel="noopener" data-track="view_all_projects" style="font-size: 12px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; text-decoration: none; color: #0F0E0C; border-bottom: 1px solid #0F0E0C; padding: 12px 0; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; align-self: flex-start">View all projects ↗</a>
+                    <a href="#submit" data-track="cta_portfolio" class="desk" style="background: #0F0E0C; color: #FBFAF7; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center">Start Your Project</a>
+                </div>
+            </div>
+        </section>
 
-<!-- WHY -->
-<section style="border-top: 1px solid #E8E3DA">
-<div class="wrap sec split">
-<div style="display: flex; flex-direction: column; gap: 24px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">Because Better Prompts <span style="font-style: italic; color: #9A7B4F">Aren’t Always the Answer.</span></h2>
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4E4940">AI can help you generate possibilities. A designer understands why a space works — proportion, hierarchy, material relationships, circulation, lighting, and visual balance.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 32px">
-<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">Design Judgment</span><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; line-height: 1.35">Know what should change — not just what can be generated.</span></div>
-<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">Spatial Understanding</span><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; line-height: 1.35">Refine layouts, proportions, materials, and architectural details.</span></div>
-<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">Visual Accuracy</span><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; line-height: 1.35">Turn a plan or concept into a coherent design direction.</span></div>
-</div>
-</div>
-</section>
+        <!-- TESTIMONIALS -->
+        <section style="background: #FFFFFF; border-top: 1px solid #E8E3DA; border-bottom: 1px solid #E8E3DA">
+            <div class="wrap" style="padding-top: clamp(80px, 11vw, 150px); padding-bottom: clamp(80px, 11vw, 150px); display: flex; flex-direction: column; gap: clamp(48px, 6vw, 72px)">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+                    <div style="display: flex; flex-direction: column; gap: 16px">
+                        <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">Client reviews</span>
+                        <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.4vw, 56px); line-height: 1.06; letter-spacing: -1px">
+                            In Their Words. 
+                            <span style="font-style: italic; color: #9A7B4F">Verified on Fiverr.</span>
+                        </h2>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 6px; align-items: flex-start">
+                        <span style="color: #A8875A; letter-spacing: 3px; font-size: 16px">★★★★★</span>
+                        <span style="font-size: 14px; color: #4E4940">
+                            <strong style="font-weight: 500; color: #0F0E0C">4.8</strong>
+                             from 1,700+ reviews · Top Rated Seller on Fiverr
+                        </span>
+                    </div>
+                </div>
+                <figure style="margin: 0; display: flex; flex-direction: column; gap: 28px; border-top: 1px solid #A8875A; padding-top: 40px">
+                    <blockquote style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(24px, 3vw, 38px); line-height: 1.3; letter-spacing: -0.4px; max-width: 1000px">“Dimas took a brand book, a floor plan and a long list of “what ifs” and turned them into a room we could actually see ourselves standing in. … He made it look better than we described it.”</blockquote>
+                    <figcaption style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: 13px; color: #4E4940">
+                        <span aria-label="5 out of 5 stars" style="color: #A8875A; letter-spacing: 3px; font-size: 13px">★★★★★</span>
+                        <strong style="font-weight: 500; color: #0F0E0C">jurigaia</strong>
+                        <span>United States</span>
+                        <span style="font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: #7A5E35">Café interior · from a floor plan</span>
+                    </figcaption>
+                </figure>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 40px 32px">
+                    <figure style="margin: 0; display: flex; flex-direction: column; gap: 18px; border-top: 1px solid #E8E3DA; padding-top: 28px">
+                        <span aria-label="5 out of 5 stars" style="color: #A8875A; letter-spacing: 3px; font-size: 13px">★★★★★</span>
+                        <blockquote style="margin: 0; font-size: 16px; line-height: 1.7; color: #2B2722">“I started with only a Google Street View image and a rough idea of the style I wanted. Dimas was able to translate this into several high-quality and realistic design concepts.”</blockquote>
+                        <figcaption style="margin-top: auto; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #4E4940">
+                            <strong style="font-weight: 500; color: #0F0E0C">
+                                j_mulder123 · 
+                                <span style="font-weight: 400; color: #6B655B">Netherlands</span>
+                            </strong>
+                            <span style="font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: #7A5E35">Exterior renovation</span>
+                        </figcaption>
+                    </figure>
+                    <figure style="margin: 0; display: flex; flex-direction: column; gap: 18px; border-top: 1px solid #E8E3DA; padding-top: 28px">
+                        <span aria-label="5 out of 5 stars" style="color: #A8875A; letter-spacing: 3px; font-size: 13px">★★★★★</span>
+                        <blockquote style="margin: 0; font-size: 16px; line-height: 1.7; color: #2B2722">“Exceptional rendering. He delivered highly accurate, clean, and professional drawings ahead of schedule. His attention to detail meant I had very few revisions needed.”</blockquote>
+                        <figcaption style="margin-top: auto; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #4E4940">
+                            <strong style="font-weight: 500; color: #0F0E0C">
+                                richard77burton · 
+                                <span style="font-weight: 400; color: #6B655B">United States</span>
+                            </strong>
+                            <span style="font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: #7A5E35">Architectural rendering</span>
+                        </figcaption>
+                    </figure>
+                    <figure style="margin: 0; display: flex; flex-direction: column; gap: 18px; border-top: 1px solid #E8E3DA; padding-top: 28px">
+                        <span aria-label="5 out of 5 stars" style="color: #A8875A; letter-spacing: 3px; font-size: 13px">★★★★★</span>
+                        <blockquote style="margin: 0; font-size: 16px; line-height: 1.7; color: #2B2722">“They took my ideas and preferences into account while adding creative solutions that significantly improved the overall look of the house.”</blockquote>
+                        <figcaption style="margin-top: auto; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #4E4940">
+                            <strong style="font-weight: 500; color: #0F0E0C">
+                                talbenarie · 
+                                <span style="font-weight: 400; color: #6B655B">Israel</span>
+                            </strong>
+                            <span style="font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: #7A5E35">Home exterior</span>
+                        </figcaption>
+                    </figure>
+                    <figure style="margin: 0; display: flex; flex-direction: column; gap: 18px; border-top: 1px solid #E8E3DA; padding-top: 28px">
+                        <span aria-label="5 out of 5 stars" style="color: #A8875A; letter-spacing: 3px; font-size: 13px">★★★★★</span>
+                        <blockquote style="margin: 0; font-size: 16px; line-height: 1.7; color: #2B2722">“He completely understood my vision right from the start and delivered top-quality 3D renders with incredible speed.”</blockquote>
+                        <figcaption style="margin-top: auto; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #4E4940">
+                            <strong style="font-weight: 500; color: #0F0E0C">
+                                dexr34 · 
+                                <span style="font-weight: 400; color: #6B655B">Saudi Arabia</span>
+                            </strong>
+                            <span style="font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: #7A5E35">Retail storefront</span>
+                        </figcaption>
+                    </figure>
+                    <figure style="margin: 0; display: flex; flex-direction: column; gap: 18px; border-top: 1px solid #E8E3DA; padding-top: 28px">
+                        <span aria-label="5 out of 5 stars" style="color: #A8875A; letter-spacing: 3px; font-size: 13px">★★★★★</span>
+                        <blockquote style="margin: 0; font-size: 16px; line-height: 1.7; color: #2B2722">“He would adjust the design until all requirements have been fulfilled as many times as it would take. … I will definitely continue to use his services.”</blockquote>
+                        <figcaption style="margin-top: auto; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #4E4940">
+                            <strong style="font-weight: 500; color: #0F0E0C">
+                                samarita10 · 
+                                <span style="font-weight: 400; color: #6B655B">Sudan</span>
+                            </strong>
+                            <span style="font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: #7A5E35">3D modeling &amp; rendering</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <a href="https://www.fiverr.com/alvadespro" target="_blank" rel="noopener" data-track="fiverr_all_reviews" style="align-self: flex-start; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #0F0E0C; border-bottom: 1px solid #A8875A; padding: 12px 0; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Read all 1,700+ reviews on Fiverr ↗</a>
+            </div>
+        </section>
 
-<!-- PROOF (gold) -->
-<section style="background: #A8875A; color: #FFFFFF">
-<div class="wrap" style="padding-top: clamp(80px, 11vw, 150px); padding-bottom: clamp(80px, 11vw, 150px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
-<span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #FFFFFF">Since 2020</span>
-<span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(76px, 13vw, 176px); line-height: 0.9; letter-spacing: -3px; color: #FFFFFF">3,400+</span>
-<span aria-hidden="true" style="width: 48px; height: 1px; background: #FFFFFF; margin: 8px 0"></span>
-<span style="font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; font-size: clamp(20px, 2.4vw, 28px); line-height: 1.35; color: #FFFFFF">Interior &amp; commercial projects delivered.</span>
-</div>
-</section>
+        <!-- WHY -->
+        <section style="border-top: 1px solid #E8E3DA">
+            <div class="wrap sec split">
+                <div style="display: flex; flex-direction: column; gap: 24px">
+                    <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">
+                        Because Better Prompts 
+                        <span style="font-style: italic; color: #9A7B4F">Aren’t Always the Answer.</span>
+                    </h2>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4E4940">AI can help you generate possibilities. A designer understands why a space works — proportion, hierarchy, material relationships, circulation, lighting, and visual balance.</p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 32px">
+                    <div style="display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">Design Judgment</span>
+                        <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; line-height: 1.35">Know what should change — not just what can be generated.</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">Spatial Understanding</span>
+                        <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; line-height: 1.35">Refine layouts, proportions, materials, and architectural details.</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #7A5E35">Visual Accuracy</span>
+                        <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; line-height: 1.35">Turn a plan or concept into a coherent design direction.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- FORM -->
-<section id="submit" style="background: #0F0E0C; color: #FBFAF7; scroll-margin-top: 64px">
-<div class="wrap sec split">
-<div style="display: flex; flex-direction: column; gap: 20px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(38px, 5vw, 68px); line-height: 1.04; letter-spacing: -1.2px">Send Us <span style="font-style: italic; color: #C9AD7C">Your Design.</span></h2>
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #A9A194; max-width: 420px">A floor plan, sketch, reference, or AI render. Tell us what you want to achieve, and our team will review the direction.</p>
-<div style="display: flex; flex-direction: column; margin-top: 8px; border-bottom: 1px solid #2E2A24">
-<span style="padding-bottom: 8px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #C9AD7C">Free review · What happens next</span>
-<div style="display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid #2E2A24"><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 18px; color: #C9AD7C; min-width: 24px">01</span><span style="font-size: 15px; line-height: 1.6; color: #D8D0C2">A designer reviews your files and notes.</span></div>
-<div style="display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid #2E2A24"><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 18px; color: #C9AD7C; min-width: 24px">02</span><span style="font-size: 15px; line-height: 1.6; color: #D8D0C2">We email you within 24 hours with the recommended next step.</span></div>
-<div style="display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid #2E2A24"><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 18px; color: #C9AD7C; min-width: 24px">03</span><span style="font-size: 15px; line-height: 1.6; color: #D8D0C2">You decide whether to move forward — no obligation.</span></div>
-</div>
-</div>
-<div>
-<form name="design-review" method="POST" action="/thanks.html" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" id="review-form" style="display: flex; flex-direction: column; gap: 32px">
-<input type="hidden" name="form-name" value="design-review">
-<input type="hidden" name="sending" id="sending" value="AI Render">
-<p hidden><label>Leave this empty <input name="bot-field"></label></p>
-<fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column">
-<legend style="padding: 0; margin-bottom: 12px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">I’m sending</legend>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid #6E5A3A">
-<button type="button" class="toggle" data-path="plan" aria-pressed="false" style="font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 16px 8px; min-height: 52px; border: none; cursor: pointer;">A Plan</button>
-<button type="button" class="toggle" data-path="render" aria-pressed="true" style="font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 16px 8px; min-height: 52px; border: none; cursor: pointer;">An AI Render</button>
-</div>
-</fieldset>
-<div class="duo" style="gap: 32px">
-<label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">Name<input type="text" name="name" autocomplete="name" required style="background: transparent; border: none; border-bottom: 1px solid #4A443B; border-radius: 0; color: #FBFAF7; font-size: 16px; letter-spacing: 0; text-transform: none; padding: 10px 0; min-height: 48px; box-sizing: border-box; width: 100%"></label>
-<label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">Email<input type="email" name="email" autocomplete="email" required style="background: transparent; border: none; border-bottom: 1px solid #4A443B; border-radius: 0; color: #FBFAF7; font-size: 16px; letter-spacing: 0; text-transform: none; padding: 10px 0; min-height: 48px; box-sizing: border-box; width: 100%"></label>
-</div>
-<label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">Project Type<select name="project_type" style="background: transparent; border: none; border-bottom: 1px solid #4A443B; border-radius: 0; color: #FBFAF7; font-size: 16px; letter-spacing: 0; text-transform: none; padding: 10px 0; min-height: 48px; box-sizing: border-box; width: 100%; background: #0F0E0C"><option>Residential Interior</option><option>Commercial Interior</option><option>Exterior</option><option>Kitchen</option><option>Café / Restaurant</option><option>Other</option></select></label>
-<label style="display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; padding: 32px 20px; border: 1px dashed #A8875A; cursor: pointer">
-<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FBFAF7" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"></path><path d="M7 9l5-5 5 5"></path><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"></path></svg>
-<span id="upload-main-label" style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; color: #FBFAF7">Upload AI Render</span>
-<span style="font-size: 13px; color: #A9A194">JPG, PNG, or PDF · up to 8 MB total</span>
-<input type="file" name="main_upload" id="main-upload" accept="image/*,.pdf" required style="font-size: 13px; color: #A9A194; max-width: 100%">
-</label>
-<label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194"><span id="upload-second-label">Floor Plan (optional)</span><input type="file" name="second_upload" id="second-upload" accept="image/*,.pdf" style="font-size: 13px; letter-spacing: 0; text-transform: none; color: #A9A194; padding: 8px 0; max-width: 100%"></label>
-<label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194"><span id="improve-label">What would you like to improve?</span><textarea name="improve" rows="2" style="background: transparent; border: none; border-bottom: 1px solid #4A443B; border-radius: 0; color: #FBFAF7; font-size: 16px; letter-spacing: 0; text-transform: none; padding: 10px 0; min-height: 48px; box-sizing: border-box; width: 100%; resize: vertical"></textarea></label>
-<label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">Project Details (optional)<textarea name="details" rows="2" style="background: transparent; border: none; border-bottom: 1px solid #4A443B; border-radius: 0; color: #FBFAF7; font-size: 16px; letter-spacing: 0; text-transform: none; padding: 10px 0; min-height: 48px; box-sizing: border-box; width: 100%; resize: vertical"></textarea></label>
-<p id="size-error" role="alert" hidden style="margin: 0; font-size: 14px; line-height: 1.6; color: #E7B98A">Your files add up to more than 8 MB. Export the render as JPG or send a smaller file, then submit again.</p>
-<button type="submit" data-track="form_submit" style="background: #A8875A; color: #0F0E0C; border: none; font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; padding: 20px 28px; min-height: 60px; cursor: pointer">Get My Free Review</button>
-<p style="margin: 0; font-size: 13px; line-height: 1.6; color: #A9A194; text-align: center">Free review · We reply within 24 hours.<br>Your files are used only to review your project.</p>
-</form>
-</div>
-</div>
-</section>
+        <!-- PROOF (gold) -->
+        <section style="background: #A8875A; color: #FFFFFF">
+            <div class="wrap" style="padding-top: clamp(80px, 11vw, 150px); padding-bottom: clamp(80px, 11vw, 150px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+                <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #FFFFFF">Since 2020</span>
+                <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(76px, 13vw, 176px); line-height: 0.9; letter-spacing: -3px; color: #FFFFFF">3,400+</span>
+                <span aria-hidden="true" style="width: 48px; height: 1px; background: #FFFFFF; margin: 8px 0"></span>
+                <span style="font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; font-size: clamp(20px, 2.4vw, 28px); line-height: 1.35; color: #FFFFFF">Interior &amp; commercial projects delivered.</span>
+                <div style="margin-top: clamp(32px, 5vw, 56px); width: 100%; max-width: 900px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 0; border-top: 1px solid rgba(255,255,255,0.45)">
+                    <div style="padding: 24px 16px; display: flex; flex-direction: column; gap: 6px; color: #FFFFFF">
+                        <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 34px; line-height: 1">4.8★</span>
+                        <span style="font-size: 12px; letter-spacing: 1.8px; text-transform: uppercase">1,700+ Fiverr reviews</span>
+                    </div>
+                    <div style="padding: 24px 16px; display: flex; flex-direction: column; gap: 6px; color: #FFFFFF">
+                        <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 34px; line-height: 1">Top Rated</span>
+                        <span style="font-size: 12px; letter-spacing: 1.8px; text-transform: uppercase">Seller on Fiverr</span>
+                    </div>
+                    <div style="padding: 24px 16px; display: flex; flex-direction: column; gap: 6px; color: #FFFFFF">
+                        <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 34px; line-height: 1">Repeat</span>
+                        <span style="font-size: 12px; letter-spacing: 1.8px; text-transform: uppercase">Clients return to order again</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- FAQ -->
-<section class="wrap sec split">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">Questions</h2>
-<div style="display: flex; flex-direction: column; border-top: 1px solid #A8875A">
-<details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0"><summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">Is the review really free?<span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span></summary><p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">Yes. A designer reviews your plan or AI render at no cost and replies within 24 hours with the recommended next step. You decide whether to move forward.</p></details>
-<details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0"><summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">Can I send an AI-generated image?<span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span></summary><p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">Yes. Refining AI renders is one of the two things this service is built for.</p></details>
-<details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0"><summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">Can I send only a floor plan?<span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span></summary><p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">Yes. Send a floor plan, sketch, or reference and we’ll design the visual from there — no AI render needed.</p></details>
-<details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0"><summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">Can you work from my existing concept?<span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span></summary><p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">Yes. We refine the direction rather than forcing you to start from zero.</p></details>
-<details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0"><summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">Is this an AI prompt service?<span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span></summary><p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">No. Alvadespro provides professional design refinement by a real designer.</p></details>
-<details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0"><summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">Who is this for?<span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span></summary><p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">Homeowners, designers, architects, developers, and anyone who needs a more accurate visual representation of a space.</p></details>
-</div>
-</section>
+        <!-- FORM -->
+        <section id="submit" style="background: #0F0E0C; color: #FBFAF7; scroll-margin-top: 64px">
+            <div class="wrap sec split">
+                <div style="display: flex; flex-direction: column; gap: 20px">
+                    <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(38px, 5vw, 68px); line-height: 1.04; letter-spacing: -1.2px">
+                        Send Us 
+                        <span style="font-style: italic; color: #C9AD7C">Your Design.</span>
+                    </h2>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #A9A194; max-width: 420px">A floor plan, sketch, reference, or AI render. Tell us what you want to achieve, and our team will review the direction.</p>
+                    <div style="display: flex; flex-direction: column; margin-top: 8px; border-bottom: 1px solid #2E2A24">
+                        <span style="padding-bottom: 8px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #C9AD7C">Free review · What happens next</span>
+                        <div style="display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid #2E2A24">
+                            <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 18px; color: #C9AD7C; min-width: 24px">01</span>
+                            <span style="font-size: 15px; line-height: 1.6; color: #D8D0C2">A designer reviews your files and notes.</span>
+                        </div>
+                        <div style="display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid #2E2A24">
+                            <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 18px; color: #C9AD7C; min-width: 24px">02</span>
+                            <span style="font-size: 15px; line-height: 1.6; color: #D8D0C2">We email you within 24 hours with the recommended next step.</span>
+                        </div>
+                        <div style="display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid #2E2A24">
+                            <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 18px; color: #C9AD7C; min-width: 24px">03</span>
+                            <span style="font-size: 15px; line-height: 1.6; color: #D8D0C2">You decide whether to move forward — no obligation.</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form name="design-review" method="POST" action="/thanks.html" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" id="review-form" style="display: flex; flex-direction: column; gap: 32px">
+                        <input type="hidden" name="form-name" value="design-review">
+                        <input type="hidden" name="sending" id="sending" value="AI Render">
+                        <p hidden>
+                            <label>
+                                Leave this empty 
+                                <input name="bot-field">
+                            </label>
+                        </p>
+                        <fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column">
+                            <legend style="padding: 0; margin-bottom: 12px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">I’m sending</legend>
+                            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid #6E5A3A">
+                                <button type="button" class="toggle" data-path="plan" aria-pressed="false" style="font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 16px 8px; min-height: 52px; border: none; cursor: pointer;">A Plan</button>
+                                <button type="button" class="toggle" data-path="render" aria-pressed="true" style="font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 16px 8px; min-height: 52px; border: none; cursor: pointer;">An AI Render</button>
+                            </div>
+                        </fieldset>
+                        <div class="duo" style="gap: 32px">
+                            <label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">
+                                Name
+                                <input type="text" name="name" autocomplete="name" required style="background: transparent; border: none; border-bottom: 1px solid #4A443B; border-radius: 0; color: #FBFAF7; font-size: 16px; letter-spacing: 0; text-transform: none; padding: 10px 0; min-height: 48px; box-sizing: border-box; width: 100%">
+                            </label>
+                            <label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">
+                                Email
+                                <input type="email" name="email" autocomplete="email" required style="background: transparent; border: none; border-bottom: 1px solid #4A443B; border-radius: 0; color: #FBFAF7; font-size: 16px; letter-spacing: 0; text-transform: none; padding: 10px 0; min-height: 48px; box-sizing: border-box; width: 100%">
+                            </label>
+                        </div>
+                        <label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">
+                            Project Type
+                            <select name="project_type" style="background: transparent; border: none; border-bottom: 1px solid #4A443B; border-radius: 0; color: #FBFAF7; font-size: 16px; letter-spacing: 0; text-transform: none; padding: 10px 0; min-height: 48px; box-sizing: border-box; width: 100%; background: #0F0E0C">
+                                <option>Residential Interior</option>
+                                <option>Commercial Interior</option>
+                                <option>Exterior</option>
+                                <option>Kitchen</option>
+                                <option>Café / Restaurant</option>
+                                <option>Other</option>
+                            </select>
+                        </label>
+                        <label style="display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; padding: 32px 20px; border: 1px dashed #A8875A; cursor: pointer">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FBFAF7" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 16V4"></path>
+                                <path d="M7 9l5-5 5 5"></path>
+                                <path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"></path>
+                            </svg>
+                            <span id="upload-main-label" style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 22px; color: #FBFAF7">Upload AI Render</span>
+                            <span style="font-size: 13px; color: #A9A194">JPG, PNG, or PDF · up to 8 MB total</span>
+                            <input type="file" name="main_upload" id="main-upload" accept="image/*,.pdf" required style="font-size: 13px; color: #A9A194; max-width: 100%">
+                        </label>
+                        <label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">
+                            <span id="upload-second-label">Floor Plan (optional)</span>
+                            <input type="file" name="second_upload" id="second-upload" accept="image/*,.pdf" style="font-size: 13px; letter-spacing: 0; text-transform: none; color: #A9A194; padding: 8px 0; max-width: 100%">
+                        </label>
+                        <label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">
+                            <span id="improve-label">What would you like to improve?</span>
+                            <textarea name="improve" rows="2" style="background: transparent; border: none; border-bottom: 1px solid #4A443B; border-radius: 0; color: #FBFAF7; font-size: 16px; letter-spacing: 0; text-transform: none; padding: 10px 0; min-height: 48px; box-sizing: border-box; width: 100%; resize: vertical"></textarea>
+                        </label>
+                        <label style="display: flex; flex-direction: column; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #A9A194">
+                            Project Details (optional)
+                            <textarea name="details" rows="2" style="background: transparent; border: none; border-bottom: 1px solid #4A443B; border-radius: 0; color: #FBFAF7; font-size: 16px; letter-spacing: 0; text-transform: none; padding: 10px 0; min-height: 48px; box-sizing: border-box; width: 100%; resize: vertical"></textarea>
+                        </label>
+                        <p id="size-error" role="alert" hidden style="margin: 0; font-size: 14px; line-height: 1.6; color: #E7B98A">Your files add up to more than 8 MB. Export the render as JPG or send a smaller file, then submit again.</p>
+                        <button type="submit" data-track="form_submit" style="background: #A8875A; color: #0F0E0C; border: none; font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; padding: 20px 28px; min-height: 60px; cursor: pointer">Get My Free Review</button>
+                        <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #A9A194; text-align: center">
+                            Free review · We reply within 24 hours.
+                            <br>
+                            4.8★ from 1,700+ reviews on Fiverr · Your files are used only to review your project.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-<!-- FINAL CTA -->
-<section style="border-top: 1px solid #E8E3DA">
-<div class="wrap sec" style="display: flex; flex-direction: column; gap: 28px">
-<h2 style="margin: 0; max-width: 880px; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(38px, 5.6vw, 80px); line-height: 1.04; letter-spacing: -1.2px">Send Us What You Have. <span style="font-style: italic; color: #9A7B4F">We’ll Design the Rest.</span></h2>
-<div class="btn-row">
-<a href="#submit" data-path="plan" data-track="cta_final_plan" style="background: #0F0E0C; color: #FBFAF7; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center">Send Your Plan</a>
-<a href="#submit" data-path="render" data-track="cta_final_render" style="background: transparent; color: #0F0E0C; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center; border: 1px solid #0F0E0C">Send Your AI Render</a>
-</div>
-<span style="font-size: 13px; color: #6B655B">Free review · Reply within 24 hours</span>
-</div>
-</section>
+        <!-- FAQ -->
+        <section class="wrap sec split">
+            <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.8px">Questions</h2>
+            <div style="display: flex; flex-direction: column; border-top: 1px solid #A8875A">
+                <details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0">
+                    <summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+                        Is the review really free?
+                        <span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span>
+                    </summary>
+                    <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">Yes. A designer reviews your plan or AI render at no cost and replies within 24 hours with the recommended next step. You decide whether to move forward.</p>
+                </details>
+                <details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0">
+                    <summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+                        Can I send an AI-generated image?
+                        <span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span>
+                    </summary>
+                    <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">Yes. Refining AI renders is one of the two things this service is built for.</p>
+                </details>
+                <details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0">
+                    <summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+                        Can I send only a floor plan?
+                        <span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span>
+                    </summary>
+                    <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">Yes. Send a floor plan, sketch, or reference and we’ll design the visual from there — no AI render needed.</p>
+                </details>
+                <details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0">
+                    <summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+                        Can you work from my existing concept?
+                        <span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span>
+                    </summary>
+                    <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">Yes. We refine the direction rather than forcing you to start from zero.</p>
+                </details>
+                <details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0">
+                    <summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+                        Is this an AI prompt service?
+                        <span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span>
+                    </summary>
+                    <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">No. Alvadespro provides professional design refinement by a real designer.</p>
+                </details>
+                <details style="border-bottom: 1px solid #E8E3DA; padding: 20px 0">
+                    <summary style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(19px, 2vw, 22px); min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+                        Who is this for?
+                        <span style="font-family: 'Inter', sans-serif; font-size: 20px; color: #9A7B4F">+</span>
+                    </summary>
+                    <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: #4E4940">Homeowners, designers, architects, developers, and anyone who needs a more accurate visual representation of a space.</p>
+                </details>
+            </div>
+        </section>
 
-<!-- FOOTER -->
-<footer style="background: #0F0E0C; color: #FBFAF7">
-<div class="wrap foot-pad" style="padding-top: 56px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
-<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Fraunces', Georgia, serif; font-size: 17px; letter-spacing: 3px; text-transform: uppercase">Alvadespro</span><span style="font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; font-size: 16px; color: #A9A194">Your luxury home design.</span></div>
-<div style="display: flex; flex-direction: column; gap: 4px; font-size: 14px">
-<a href="https://alvadespro.framer.media/projects" target="_blank" rel="noopener" data-track="footer_projects" style="color: #FBFAF7; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center">View all projects ↗</a>
-<a href="mailto:alva.nextenterprise@gmail.com" style="color: #A9A194; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center">alva.nextenterprise@gmail.com</a>
-<a href="https://alvadespro.framer.media" style="color: #A9A194; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center">alvadespro.framer.media</a>
-</div>
-</div>
-</footer>
+        <!-- FINAL CTA -->
+        <section style="border-top: 1px solid #E8E3DA">
+            <div class="wrap sec" style="display: flex; flex-direction: column; gap: 28px">
+                <h2 style="margin: 0; max-width: 880px; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(38px, 5.6vw, 80px); line-height: 1.04; letter-spacing: -1.2px">
+                    Send Us What You Have. 
+                    <span style="font-style: italic; color: #9A7B4F">We’ll Design the Rest.</span>
+                </h2>
+                <div class="btn-row">
+                    <a href="#submit" data-path="plan" data-track="cta_final_plan" style="background: #0F0E0C; color: #FBFAF7; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center">Send Your Plan</a>
+                    <a href="#submit" data-path="render" data-track="cta_final_render" style="background: transparent; color: #0F0E0C; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; padding: 18px 28px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center; border: 1px solid #0F0E0C">Send Your AI Render</a>
+                </div>
+                <span style="font-size: 13px; color: #6B655B">Free review · Reply within 24 hours</span>
+            </div>
+        </section>
 
-<!-- MOBILE STICKY CTA (appears after scrolling past hero) -->
-<a href="#submit" data-track="cta_sticky_mobile" class="sticky-cta" id="sticky-cta" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: #0F0E0C; color: #FBFAF7; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; min-height: 64px; padding-bottom: env(safe-area-inset-bottom, 0px); box-sizing: border-box; align-items: center; justify-content: center; border-top: 1px solid #A8875A">Get a Free Review</a>
+        <!-- FOOTER -->
+        <footer style="background: #0F0E0C; color: #FBFAF7">
+            <div class="wrap foot-pad" style="padding-top: 56px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
+                <div style="display: flex; flex-direction: column; gap: 8px">
+                    <span style="font-family: 'Fraunces', Georgia, serif; font-size: 17px; letter-spacing: 3px; text-transform: uppercase">Alvadespro</span>
+                    <span style="font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; font-size: 16px; color: #A9A194">Your luxury home design.</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 4px; font-size: 14px">
+                    <a href="https://alvadespro.framer.media/projects" target="_blank" rel="noopener" data-track="footer_projects" style="color: #FBFAF7; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center">View all projects ↗</a>
+                    <a href="mailto:alva.nextenterprise@gmail.com" style="color: #A9A194; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center">alva.nextenterprise@gmail.com</a>
+                    <a href="https://alvadespro.framer.media" style="color: #A9A194; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center">alvadespro.framer.media</a>
+                </div>
+            </div>
+        </footer>
 
-</div>
-<script>
-(function(){
-  var copy={plan:{sending:'Plan',main:'Upload Floor Plan / Sketch',second:'Reference Images (optional)',improve:'What do you want the space to feel like?'},
-            render:{sending:'AI Render',main:'Upload AI Render',second:'Floor Plan (optional)',improve:'What would you like to improve?'}};
-  function setPath(p){
-    var c=copy[p]; if(!c) return;
-    document.getElementById('sending').value=c.sending;
-    document.getElementById('upload-main-label').textContent=c.main;
-    document.getElementById('upload-second-label').textContent=c.second;
-    document.getElementById('improve-label').textContent=c.improve;
-    document.querySelectorAll('.toggle').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.path===p?'true':'false');});
-  }
-  document.querySelectorAll('[data-path]').forEach(function(el){el.addEventListener('click',function(){setPath(el.dataset.path);});});
-  setPath('render');
-  var sticky=document.getElementById('sticky-cta');
-  function onScroll(){ if(sticky) sticky.classList.toggle('on', window.scrollY>560); }
-  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
-  var form=document.getElementById('review-form'), err=document.getElementById('size-error');
-  form.addEventListener('submit',function(e){
-    var total=0; ['main-upload','second-upload'].forEach(function(id){var f=document.getElementById(id).files[0]; if(f) total+=f.size;});
-    if(total>7.8*1024*1024){ e.preventDefault(); err.hidden=false; err.scrollIntoView({block:'center'}); }
-    else { err.hidden=true; }
-  });
-})();
-</script>
+        <!-- MOBILE STICKY CTA (appears after scrolling past hero) -->
+        <a href="#submit" data-track="cta_sticky_mobile" class="sticky-cta" id="sticky-cta" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: #0F0E0C; color: #FBFAF7; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; min-height: 64px; padding-bottom: env(safe-area-inset-bottom, 0px); box-sizing: border-box; align-items: center; justify-content: center; border-top: 1px solid #A8875A">Get a Free Review</a>
+
+    </div>
+    <script>
+    (function() {
+        var copy = {
+            plan: {
+                sending: 'Plan',
+                main: 'Upload Floor Plan / Sketch',
+                second: 'Reference Images (optional)',
+                improve: 'What do you want the space to feel like?'
+            },
+            render: {
+                sending: 'AI Render',
+                main: 'Upload AI Render',
+                second: 'Floor Plan (optional)',
+                improve: 'What would you like to improve?'
+            }
+        };
+        function setPath(p) {
+            var c = copy[p];
+            if (!c)
+                return;
+            document.getElementById('sending').value = c.sending;
+            document.getElementById('upload-main-label').textContent = c.main;
+            document.getElementById('upload-second-label').textContent = c.second;
+            document.getElementById('improve-label').textContent = c.improve;
+            document.querySelectorAll('.toggle').forEach(function(b) {
+                b.setAttribute('aria-pressed', b.dataset.path === p ? 'true' : 'false');
+            });
+        }
+        document.querySelectorAll('[data-path]').forEach(function(el) {
+            el.addEventListener('click', function() {
+                setPath(el.dataset.path);
+            });
+        });
+        setPath('render');
+        var sticky = document.getElementById('sticky-cta');
+        function onScroll() {
+            if (sticky)
+                sticky.classList.toggle('on', window.scrollY > 560);
+        }
+        window.addEventListener('scroll', onScroll, {
+            passive: true
+        });
+        onScroll();
+        var form = document.getElementById('review-form'),
+            err = document.getElementById('size-error');
+        form.addEventListener('submit', function(e) {
+            var total = 0;
+            ['main-upload', 'second-upload'].forEach(function(id) {
+                var f = document.getElementById(id).files[0];
+                if (f)
+                    total += f.size;
+            });
+            if (total > 7.8 * 1024 * 1024) {
+                e.preventDefault();
+                err.hidden = false;
+                err.scrollIntoView({
+                    block: 'center'
+                });
+            }
+            else {
+                err.hidden = true;
+                try {
+                    sessionStorage.setItem('alva_lead_pending', '1');
+                } catch (x) {}
+            }
+        });
+    })();
+    </script>
 </body>
 </html>
