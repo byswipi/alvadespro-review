@@ -7,6 +7,24 @@
 <meta name="robots" content="noindex">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>body{margin:0;background:#0F0E0C;color:#FBFAF7;font-family:'Inter',system-ui,sans-serif}a{color:#FBFAF7}</style>
+  <!-- 1. INITIALIZE GPT ADS BASE PIXEL -->
+    <script>
+      !function(e,t,n,s,c,a,o){e.oaiq||(c=e.oaiq=function(){c.process?c.process.apply(c,arguments):c.queue.push(arguments)},c.queue=[],c.t=1*new Date,a=t.createElement(n),o=t.getElementsByTagName(n)[0],a.async=1,a.src=s,o.parentNode.insertBefore(a,o))}(window,document,"script","https://openai.com");
+      
+      // Ganti 'P-XXXXXX' dengan Pixel ID Anda (misal diambil dari query string pid=MgmoZuScyoPuzkp1Tm8LfU)
+      oaiq("init", "MgmoZuScyoPuzkp1Tm8LfU"); 
+      oaiq("track", "PageView");
+    </script>
+
+    <!-- 2. GPT ADS CONVERSION EVENT TRACKING -->
+    <script>
+      // Kode ini otomatis berjalan saat halaman thankyou.html dimuat oleh browser
+      oaiq(
+        "measure",
+        "lead_created",
+        { type: "customer_action" }
+      );
+    </script>
 </head>
 <body>
 <main style="min-height: 100vh; box-sizing: border-box; padding: clamp(40px, 8vw, 96px) clamp(20px, 5vw, 40px); display: flex; flex-direction: column; justify-content: center; max-width: 760px; margin: 0 auto; gap: 24px">
